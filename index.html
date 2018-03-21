@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Michael Scott Quotes!</title>
+      
+      <style type="text/css">
+
+     body{
+          text-align:center;
+          background-color: #909090;
+          font-family: courier;
+        }
+
+        #michael {
+          padding-bottom: 20px;
+        }
+
+        #quote {
+          right: 0;
+          left: 0;
+          display: inline;
+          text-align: center;
+          font-family:verdana;
+          color:white;
+          word-wrap: break-word;
+        }
+          
+        #author {
+          text-align: center;
+          font-family:verdana;
+          color:black;
+          display: block;
+          word-wrap: break-word;
+         }
+          .main{
+              margin-top: 40px;
+          }
+        
+
+      </style>
+  </head>
+    <body>
+    <div class= "container fluid main"> 
+
+            <!-- Title -->
+            <h1>Random Michael Scott Quotes</h1>
+
+            <br>
+            <!--Image of Michael Scott -->
+            <img id="michael"  src=https://upload.wikimedia.org/wikipedia/en/d/dc/MichaelScott.png alt="a picture of Michael Scott sitting at his desk">
+
+            <br>
+            <!-- Get a Quote button -->
+            <button id="getQuote" class="btn btn-primary text-center"> Get A Quote</button>
+
+            <br><br>
+
+            <!-- Where the quotes will be-->
+
+
+           <div id='quote'></div> 
+            <br /> 
+         <div id='author'></div> 
+
+            <br>
+
+            <!-- Twitter button -->
+            <button id class="btn btn-info text-center"><i class= "fa fa-twitter"></i> Tweet</button>
+          </div>
+
+        <br> <br> 
+        <footer> Made by Doug  A. Carter </footer>
+
+      
+    
+    
+    
+        
+        
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    
+    <!--Popper.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    
+    <!--Bootstrap JS-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!--My JS-->
+    <script type="text/javascript">
+       
+        
+        
+            $(document).ready(function() {
+                $("#getQuote").on("click", function() { //get quote function
+
+
+                $('.btn2').on("click", function tweet(){ //tweet quote function
+                  window.open('https://twitter.com/intent/tweet?hashtags=quotes&related=&text=' +                                           document.getElementById('quote').innerHTML +" " + document.getElementById('author').innerHTML); 
+                });
+                // The quotes!
+                var quotes = {
+                  1: ["Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me.",
+                    "-Michael Scott"],
+                  2: ["Then suddenly shes's not your ho no mo'.", "-Michael Scott"],
+                  3: ["Welcome back jerky jerk face.", "-Michael Scott"],
+                  4: ["I am downloading some N3P music.", "-Michael Scott"],
+                  5: ["Sometimes I'll start a sentence and I don't even know where it's going. I just hope I find it along the way.",
+                      "-Michael Scott"],
+                  6: ["Occasionally, I'll hit somebody with my car. So sue me.","-Michael Scott"],
+                  7: ["If I had a gun with two bullets and I was in a room with Hitler, Bin Laden, and Toby, I would shoot Toby       twice.","-Michael Scott"],
+                  8: ["Well, just tell him to call me as ASAP as possible.","-Michael Scott"],
+                  9: ["Hate to see you leave but I love to watch you go. 'Cause of your butt.","-Michael Scott"],
+                  10: ["You know what they say. 'Fool me once, strike one, but fool me twice... Strike three.'","-Michael Scott"], 
+                  11: ["Do you think that doing alcohol is cool?", "-Michael Scott"],
+                  12: ["I love inside jokes. Love to be a part of one someday.", "-Michael Scott"],
+                  13: ["That's what she said.", "-Michael Scott"],
+                  14: ["And you know what's gonna be on your tombstone? 'Loser.'", "-Michael Scott"],
+                  15: ["Well, happy birthday, Jesus. Sorry your party's so lame.", "-Michael Scott"],
+                  16: ["I say dance, they say, 'How high.'", "-Michael Scott"],
+                  17: ["Well, well, well, how the turntables.", "-Michael Scott"],
+                  18: ["Presents are the best way to show how much you care. It's a tangible thing you can point to and say, 'Hey man, I love you, This many dollars worth.'", "-Michael Scott"],
+                  19: ["You may look around and see two groups here: white collar, blue collar. But I dont see it that way, and you know why not? Because I am collar-blind.", "-Michael Scott"],
+                  20: ["Yes it's true! I, Michael Scott, am signing up with an online dating service. I need a username and I have a great one. Little Kid Lover. That way people will know exactly where my priorities are at.", "-Michael Scott"],
+                  21: ["I dont come up with this stuff, I just forward it along. You wouldn't arrest the guy who was just passing drugs from one guy to another.", "-Michael Scott"],
+                  22: ["It's not like booze ever killed anyone.", "-Michael Scott"],
+                  23: ["Don't ever, for any reason, do anything for anyone, for any reason, ever, no matter what. No matter where. Or who, or who you are with, or where you are going or... where you've been... ever. For any reason, whatsoever.", "-Michael Scott"],
+                  24: ["It's simply beyond words. It's incalculable.", "-Michael Scott"],
+                  25: ["Jim and I are great friends. We hang out a ton, mostly at work.", "-Michael Scott"]
+
+            };
+            // how the quote is selected.
+            var randomQuoteNumber = Math.ceil(Math.random() * Object.keys(quotes).length);
+
+            $("#quote").text(quotes[randomQuoteNumber][0]); 
+            $("#author").text(quotes[randomQuoteNumber][1]);
+
+          });
+
+        });
+        </script>
+        
+        <script>
+        //for tooltips to work
+        $('[data-toggle="tooltip"]').tooltip()
+        
+        //for popovers to work
+        $('[data-toggle="popover"]').popover()
+        
+        //for scrollspy requires additional setup. check docs.
+        $('body').scrollspy({ target: '' })
+    </script>
+    </body>
+</html>
