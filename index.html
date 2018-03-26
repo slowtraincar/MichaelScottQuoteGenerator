@@ -49,29 +49,27 @@
     <body>
     <div class= "container fluid main"> 
 
-            <!-- Title -->
+<!-- Title -->
             <h1>Random Michael Scott Quotes</h1>
 
             <br>
-            <!--Image of Michael Scott -->
+<!--Image of Michael Scott -->
             <img id="michael"  src=https://upload.wikimedia.org/wikipedia/en/d/dc/MichaelScott.png alt="a picture of Michael Scott sitting at his desk">
 
             <br>
-            <!-- Get a Quote button -->
+<!-- Get a Quote button -->
             <button id="getQuote" class="btn btn-primary text-center"> Get A Quote</button>
 
             <br><br>
 
-            <!-- Where the quotes will be-->
-
-
+<!-- Where the quotes will be-->
            <div id='quote'></div> 
             <br /> 
          <div id='author'></div> 
 
             <br>
 
-            <!-- Twitter button -->
+ <!-- Twitter button -->
             <button id class="btn btn-info text-center"><i class= "fa fa-twitter"></i> Tweet</button>
           </div>
 
@@ -100,15 +98,16 @@
     <script type="text/javascript">
        
         
-        
+//get quote function
             $(document).ready(function() {
-                $("#getQuote").on("click", function() { //get quote function
+                $("#getQuote").on("click", function() { 
 
-
-                $('.btn2').on("click", function tweet(){ //tweet quote function
+//tweet quote function
+                $('.btn2').on("click", function tweet(){ 
                   window.open('https://twitter.com/intent/tweet?hashtags=quotes&related=&text=' +                                           document.getElementById('quote').innerHTML +" " + document.getElementById('author').innerHTML); 
                 });
-                // The quotes!
+                  
+// The quotes
                 var quotes = {
                   1: ["Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me.",
                     "-Michael Scott"],
@@ -139,7 +138,7 @@
                   25: ["Jim and I are great friends. We hang out a ton, mostly at work.", "-Michael Scott"]
 
             };
-            // how the quote is selected.
+// how the quote is selected
             var randomQuoteNumber = Math.ceil(Math.random() * Object.keys(quotes).length);
 
             $("#quote").text(quotes[randomQuoteNumber][0]); 
